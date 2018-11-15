@@ -2,7 +2,7 @@ $(document).ready(function(){
 //Aqui va a ejecutarse el código una vez que este cargado
 
 $('.card').click(function(){
-//Aqui agreagmos la función que quita o agraga la clase ´card--open'
+//Aqui agregamos la función que quita o agraga la clase ´card--open'
  $(this).toggleClass('card--open');
 });
 
@@ -36,6 +36,11 @@ $('.create__select').change(function(){
 	$('.create_img').attr('src',image);
 	//console.log('change' , $(event.currentTarget).val());
     //console.log('change' , $(this).val());
+
+    $('#image').on('change',function(e){
+        $('.create__image .create__img').attr('src','assets/images/squared/'+$(this).val()); 
+
+    })
 });
 
 
